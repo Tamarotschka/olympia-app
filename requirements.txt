@@ -1,0 +1,6 @@
+# Olympia-Datenanalyse - Abhängigkeiten
+# =====================================
+
+# Datenverarbeitung
+pandas==2.3.3
+numpy==2.4.1
