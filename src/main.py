@@ -5,6 +5,7 @@ from analysis_gender import analyze_gender_ratio, format_gender_report
 from analysis_correlation import analyze_athletes_medals_correlation, format_correlation_report
 from analysis_gender_medals import analyze_gender_medals_correlation, format_gender_medals_report
 from analysis_gold import analyze_gold_correlation, format_gold_report
+from analysis_sports_variety import analyze_sports_variety, format_sports_variety_report
 
 
 def main():
@@ -58,6 +59,12 @@ def main():
     gold_analysis = analyze_gold_correlation(df)
     gold_report = format_gold_report(gold_analysis)
     print(gold_report)
+    
+    # ===== ANALYSE 7: Medaillen-Vielfalt nach Sportarten =====
+    print("Führe Analyse 7 aus: Medaillen-Vielfalt nach Sportarten...")
+    variety_analysis = analyze_sports_variety(df)
+    variety_report = format_sports_variety_report(variety_analysis)
+    print(variety_report)
     
     print("=" * 60)
     print("Analyse abgeschlossen!")
