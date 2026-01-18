@@ -2,6 +2,7 @@ from data_loader import load_olympics_data, clean_data
 from analysis_countries import analyze_countries_by_continent, format_countries_report
 from analysis_sports import analyze_sports_dominance, format_dominance_report
 from analysis_gender import analyze_gender_ratio, format_gender_report
+from analysis_correlation import analyze_athletes_medals_correlation, format_correlation_report
 
 
 def main():
@@ -37,6 +38,12 @@ def main():
     gender_analysis = analyze_gender_ratio(df)
     gender_report = format_gender_report(gender_analysis)
     print(gender_report)
+    
+    # ===== ANALYSE 4: Korrelation Athleten/Medaillen =====
+    print("Führe Analyse 4 aus: Korrelation Athleten/Medaillen...")
+    correlation_analysis = analyze_athletes_medals_correlation(df)
+    correlation_report = format_correlation_report(correlation_analysis)
+    print(correlation_report)
     
     print("=" * 60)
     print("Analyse abgeschlossen!")
