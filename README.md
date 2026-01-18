@@ -39,9 +39,9 @@ Die Anwendung beantwortet folgende Fragen:
 
 Schritte, um eine neue Analyse hinzuzufügen:
 
-1. Neue Funktion in `analysis.py` erstellen
+1. Neue Funktion bzw. Datei für die Analyse erstellen
 2. Formatierungsfunktion für die Ausgabe erstellen
-3. In `main.py` aufrufen
+3. Die erstellte Analysedatei in `main.py` aufrufen
 
 ## Datenquelle
 
