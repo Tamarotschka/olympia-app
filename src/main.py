@@ -2,8 +2,10 @@ from data_loader import load_olympics_data, clean_data
 from analysis import (
     analyze_countries_by_continent,
     analyze_sports_dominance,
+    analyze_gender_ratio,
     format_countries_report,
-    format_dominance_report
+    format_dominance_report,
+    format_gender_report
 )
 
 
@@ -35,6 +37,12 @@ def main():
     dominance_analysis = analyze_sports_dominance(df)
     dominance_report = format_dominance_report(dominance_analysis)
     print(dominance_report)
+    
+    # ===== ANALYSE 3: Geschlechterverhältnis =====
+    print("Führe Analyse 3 aus: Geschlechterverhältnis...")
+    gender_analysis = analyze_gender_ratio(df)
+    gender_report = format_gender_report(gender_analysis)
+    print(gender_report)
     
     print("=" * 60)
     print("Analyse abgeschlossen!")
