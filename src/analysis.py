@@ -1,3 +1,6 @@
+import pandas as pd
+from data_loader import get_sport_columns
+
 def analyze_countries_by_continent(df: pd.DataFrame) -> dict:
     """
     Analysiert die Verteilung der teilnehmenden Länder nach Kontinenten.

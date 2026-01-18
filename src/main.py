@@ -1,17 +1,3 @@
-"""
-Hauptprogramm für die Olympia-Datenanalyse.
-
-Dieses Programm analysiert die Daten der Olympischen Winterspiele 2022
-und beantwortet folgende Fragen:
-
-1. Wie viele Länder nahmen an den Winterspielen teil und wie verteilen 
-   sich diese auf die Kontinente?
-2. Welche Sportarten dominieren einzelne Länder?
-
-Verwendung:
-    python main.py
-"""
-
 from data_loader import load_olympics_data, clean_data
 from analysis import (
     analyze_countries_by_continent,
