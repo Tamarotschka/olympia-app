@@ -1,19 +1,13 @@
 from data_loader import load_olympics_data, clean_data
-from analysis import (
-    analyze_countries_by_continent,
-    analyze_sports_dominance,
-    analyze_gender_ratio,
-    format_countries_report,
-    format_dominance_report,
-    format_gender_report
-)
+from analysis_countries import analyze_countries_by_continent, format_countries_report
+from analysis_sports import analyze_sports_dominance, format_dominance_report
+from analysis_gender import analyze_gender_ratio, format_gender_report
 
 
 def main():
     """
     Hauptfunktion führt alle Analysen aus und gibt die Ergebnisse aus.
     """
-    # Pfad zur Datendatei
     data_path = "../assets/Olympics2022.csv"
     
     print("Lade Olympia-Daten...")
