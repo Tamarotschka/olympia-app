@@ -4,7 +4,7 @@ import numpy as np
 
 def analyze_athletes_medals_correlation(df: pd.DataFrame) -> dict:
     """
-    Analysiert den Zusammenhang zwischen Athletenzahl und Medaillenanzahl.
+    Gibt es einen Zusammenhang zwischen der Anzahl der Athlet:innen und der Anzahl der gewonnenen Medaillen
     """
     # Nur Länder mit Athleten
     df_with_athletes = df[df['Total Athletes'] > 0].copy()

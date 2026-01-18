@@ -3,7 +3,7 @@ import pandas as pd
 
 def analyze_gender_medals_correlation(df: pd.DataFrame) -> dict:
     """
-    Analysiert den Zusammenhang zwischen Frauenanteil und Medaillenerfolg.
+    Analysiert wie ist der Zusammenhang zwischen dem Frauenanteil eines Landes und der Gesamtanzahl der gewonnenen Medaillen
     """
     # Nur Länder mit Athleten
     df_with_athletes = df[df['Total Athletes'] > 0].copy()

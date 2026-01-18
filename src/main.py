@@ -4,6 +4,7 @@ from analysis_sports import analyze_sports_dominance, format_dominance_report
 from analysis_gender import analyze_gender_ratio, format_gender_report
 from analysis_correlation import analyze_athletes_medals_correlation, format_correlation_report
 from analysis_gender_medals import analyze_gender_medals_correlation, format_gender_medals_report
+from analysis_gold import analyze_gold_correlation, format_gold_report
 
 
 def main():
@@ -51,6 +52,12 @@ def main():
     gender_medals_analysis = analyze_gender_medals_correlation(df)
     gender_medals_report = format_gender_medals_report(gender_medals_analysis)
     print(gender_medals_report)
+    
+    # ===== ANALYSE 6: Gold und Gesamtmedaillen =====
+    print("Führe Analyse 6 aus: Gold und Gesamtmedaillen...")
+    gold_analysis = analyze_gold_correlation(df)
+    gold_report = format_gold_report(gold_analysis)
+    print(gold_report)
     
     print("=" * 60)
     print("Analyse abgeschlossen!")
