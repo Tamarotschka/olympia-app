@@ -32,43 +32,43 @@ def main():
     print(countries_report)
     
     # ===== ANALYSE 2: Sportarten-Dominanz =====
-    print("Führe Analyse 2 aus: Sportarten-Dominanz...")
+    print("Führe Analyse 2 aus: Welche Sportarten dominieren einzelne Länder")
     dominance_analysis = analyze_sports_dominance(df)
     dominance_report = format_dominance_report(dominance_analysis)
     print(dominance_report)
     
     # ===== ANALYSE 3: Geschlechterverhältnis =====
-    print("Führe Analyse 3 aus: Geschlechterverhältnis...")
+    print("Führe Analyse 3 aus: Wie ist das Verhältnis von Männern zu Frauen pro Land?...")
     gender_analysis = analyze_gender_ratio(df)
     gender_report = format_gender_report(gender_analysis)
     print(gender_report)
     
     # ===== ANALYSE 4: Korrelation Athleten/Medaillen =====
-    print("Führe Analyse 4 aus: Korrelation Athleten/Medaillen...")
+    print("Führe Analyse 4 aus: Gibt es einen Zusammenhang zwischen der Anzahl der Athlet:innen und der Anzahl der gewonnenen Medaillen...")
     correlation_analysis = analyze_athletes_medals_correlation(df)
     correlation_report = format_correlation_report(correlation_analysis)
     print(correlation_report)
     
     # ===== ANALYSE 5: Frauenanteil und Medaillenerfolg =====
-    print("Führe Analyse 5 aus: Frauenanteil und Medaillenerfolg...")
+    print("Führe Analyse 5 aus: Wie ist der Zusammenhang zwischen dem Frauenanteil eines Landes und der Gesamtanzahl der gewonnenen Medaillen...")
     gender_medals_analysis = analyze_gender_medals_correlation(df)
     gender_medals_report = format_gender_medals_report(gender_medals_analysis)
     print(gender_medals_report)
     
     # ===== ANALYSE 6: Gold und Gesamtmedaillen =====
-    print("Führe Analyse 6 aus: Gold und Gesamtmedaillen...")
+    print("Führe Analyse 6 aus: Wie stark hängen Goldmedaillen mit der Gesamtmedaillenzahl zusammen")
     gold_analysis = analyze_gold_correlation(df)
     gold_report = format_gold_report(gold_analysis)
     print(gold_report)
     
     # ===== ANALYSE 7: Medaillen-Vielfalt nach Sportarten =====
-    print("Führe Analyse 7 aus: Medaillen-Vielfalt nach Sportarten...")
+    print("Führe Analyse 7 aus: Welche Länder haben in vielen verschiedenen Sportarten Medaillen")
     variety_analysis = analyze_sports_variety(df)
     variety_report = format_sports_variety_report(variety_analysis)
     print(variety_report)
     
     # ===== ANALYSE 8: Medaillen-Verteilung pro Sportart =====
-    print("Führe Analyse 8 aus: Medaillen-Verteilung pro Sportart...")
+    print("Führe Analyse 8 aus: In welchen Sportarten haben viele verschiedene Länder Medaillen gewonnen.")
     distribution_analysis = analyze_sports_distribution(df)
     distribution_report = format_sports_distribution_report(distribution_analysis)
     print(distribution_report)
