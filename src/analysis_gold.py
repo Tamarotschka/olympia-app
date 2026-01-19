@@ -57,7 +57,7 @@ def format_gold_report(analysis: dict) -> str:
     """
     lines = []
     lines.append("=" * 60)
-    lines.append("ANALYSE: GOLDMEDAILLEN UND GESAMTERFOLG")
+    lines.append("Analyse: Goldmedaillen und Gesamterfolg")
     lines.append("Wie stark hängen Goldmedaillen mit der Gesamtzahl zusammen?")
     lines.append("=" * 60)
     lines.append("")
@@ -79,13 +79,13 @@ def format_gold_report(analysis: dict) -> str:
     # Interpretation
     corr = analysis['correlation']
     if corr >= 0.9:
-        interpretation = "SEHR STARK - Goldmedaillen korrelieren stark mit Gesamterfolg"
+        interpretation = "Sehr stark - Goldmedaillen korrelieren stark mit Gesamterfolg"
     elif corr >= 0.7:
-        interpretation = "STARK - Wer viel Gold holt, holt meist auch viele Medaillen"
+        interpretation = "Stark - Wer viel Gold holt, holt meist auch viele Medaillen"
     elif corr >= 0.4:
-        interpretation = "MODERAT - Ein Zusammenhang besteht"
+        interpretation = "Moderat - Ein Zusammenhang besteht"
     else:
-        interpretation = "SCHWACH - Kein starker Zusammenhang"
+        interpretation = "Schwach - Kein starker Zusammenhang"
     
     lines.append(f"  Interpretation:           {interpretation}")
     lines.append("")

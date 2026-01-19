@@ -55,7 +55,7 @@ def format_sports_variety_report(analysis: dict) -> str:
     """
     lines = []
     lines.append("=" * 60)
-    lines.append("ANALYSE: MEDAILLEN-VIELFALT NACH SPORTARTEN")
+    lines.append("Analyse: Medaillen-Vielfalt nach Sportarten")
     lines.append("Welche Länder haben in vielen Sportarten Medaillen?")
     lines.append("=" * 60)
     lines.append("")

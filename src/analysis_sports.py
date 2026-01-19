@@ -48,7 +48,7 @@ def format_dominance_report(analysis: dict) -> str:
     """
     lines = []
     lines.append("=" * 60)
-    lines.append("ANALYSE: SPORTARTEN-DOMINANZ")
+    lines.append("Analyse: Sportarten-Dominanz")
     lines.append("Welches Land führt in welcher Sportart?")
     lines.append("=" * 60)
     lines.append("")

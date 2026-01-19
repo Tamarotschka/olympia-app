@@ -46,7 +46,7 @@ def format_gender_medals_report(analysis: dict) -> str:
     """
     lines = []
     lines.append("=" * 60)
-    lines.append("ANALYSE: FRAUENANTEIL UND MEDAILLENERFOLG")
+    lines.append("Analyse: Frauenanteil und Medaillenerfolg")
     lines.append("Gibt es einen Zusammenhang?")
     lines.append("=" * 60)
     lines.append("")
@@ -59,19 +59,19 @@ def format_gender_medals_report(analysis: dict) -> str:
     # Interpretation
     corr = analysis['correlation']
     if corr >= 0.3:
-        interpretation = "POSITIV - Höherer Frauenanteil korreliert mit mehr Medaillen"
+        interpretation = "Positiv - Höherer Frauenanteil korreliert mit mehr Medaillen"
     elif corr <= -0.3:
-        interpretation = "NEGATIV - Höherer Frauenanteil korreliert mit weniger Medaillen"
+        interpretation = "Negativ - Höherer Frauenanteil korreliert mit weniger Medaillen"
     else:
-        interpretation = "KEIN klarer Zusammenhang erkennbar"
+        interpretation = "Kein klarer Zusammenhang erkennbar"
     
     lines.append(f"  Interpretation:                   {interpretation}")
     lines.append("")
     
     lines.append("Durchschnittlicher Frauenanteil:")
     lines.append("-" * 40)
-    lines.append(f"  Länder MIT Medaillen ({analysis['countries_with_medals']:2}):       {analysis['avg_women_with_medals']:.1f}%")
-    lines.append(f"  Länder OHNE Medaillen ({analysis['countries_without_medals']:2}):      {analysis['avg_women_without_medals']:.1f}%")
+    lines.append(f"  Länder mit Medaillen ({analysis['countries_with_medals']:2}):       {analysis['avg_women_with_medals']:.1f}%")
+    lines.append(f"  Länder ohne Medaillen ({analysis['countries_without_medals']:2}):      {analysis['avg_women_without_medals']:.1f}%")
     lines.append("")
     
     lines.append("Medaillengewinner nach Frauenanteil:")

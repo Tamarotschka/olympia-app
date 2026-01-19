@@ -1,5 +1,5 @@
 from data_loader import load_olympics_data, clean_data
-from analysis_countries import analyze_countries_by_continent, format_countries_report
+from analysis_countries import analyze_countries_by_medals, format_countries_report
 from analysis_sports import analyze_sports_dominance, format_dominance_report
 from analysis_gender import analyze_gender_ratio, format_gender_report
 from analysis_correlation import analyze_athletes_medals_correlation, format_correlation_report
@@ -25,9 +25,9 @@ def main():
     print(f"Daten geladen: {len(df)} Länder, {len(df.columns)} Spalten")
     print("")
     
-    # ===== ANALYSE 1: Länder nach Kontinenten =====
-    print("Führe Analyse 1 aus: Länder nach Kontinenten...")
-    countries_analysis = analyze_countries_by_continent(df)
+    # ===== ANALYSE 1: Medaillen-Ranking nach Ländern =====
+    print("Führe Analyse 1 aus: Welche Länder haben die meisten Gold-/Silber-/Bronzemedaillen...")
+    countries_analysis = analyze_countries_by_medals(df)
     countries_report = format_countries_report(countries_analysis)
     print(countries_report)
     

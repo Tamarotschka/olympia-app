@@ -54,7 +54,7 @@ def format_correlation_report(analysis: dict) -> str:
     """
     lines = []
     lines.append("=" * 60)
-    lines.append("ANALYSE: ZUSAMMENHANG ATHLETEN UND MEDAILLEN")
+    lines.append("Analyse: Zusammenhang Athleten und Medaillen")
     lines.append("Gibt es eine Korrelation zwischen Teamgröße und Erfolg?")
     lines.append("=" * 60)
     lines.append("")
@@ -77,13 +77,13 @@ def format_correlation_report(analysis: dict) -> str:
     
     # Interpretation der Korrelation
     if corr >= 0.7:
-        interpretation = "STARK POSITIV - Mehr Athleten = tendenziell mehr Medaillen"
+        interpretation = "Stark positiv - Mehr Athleten = tendenziell mehr Medaillen"
     elif corr >= 0.4:
-        interpretation = "MODERAT POSITIV - Ein gewisser Zusammenhang besteht"
+        interpretation = "Moderat positiv - Ein gewisser Zusammenhang besteht"
     elif corr >= 0.2:
-        interpretation = "SCHWACH POSITIV - Geringer Zusammenhang"
+        interpretation = "Schwach positiv - Geringer Zusammenhang"
     else:
-        interpretation = "KEIN/KAUM Zusammenhang erkennbar"
+        interpretation = "Kein/kaum Zusammenhang erkennbar"
     
     lines.append(f"  Interpretation:           {interpretation}")
     lines.append("")

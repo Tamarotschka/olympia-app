@@ -51,7 +51,7 @@ def format_sports_distribution_report(analysis: dict) -> str:
     """
     lines = []
     lines.append("=" * 60)
-    lines.append("ANALYSE: MEDAILLEN-VERTEILUNG PRO SPORTART")
+    lines.append("Analyse: Medaillen-Verteilung pro Sportart")
     lines.append("In welchen Sportarten haben viele Länder Medaillen?")
     lines.append("=" * 60)
     lines.append("")

@@ -45,7 +45,7 @@ def format_gender_report(analysis: dict) -> str:
     """
     lines = []
     lines.append("=" * 60)
-    lines.append("ANALYSE: GESCHLECHTERVERHÄLTNIS")
+    lines.append("Analyse: Geschlechterverhältnis")
     lines.append("Verhältnis von Männern zu Frauen pro Land")
     lines.append("=" * 60)
     lines.append("")
