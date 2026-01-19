@@ -1,4 +1,4 @@
-from data_loader import load_olympics_data, clean_data
+from data_loader import load_olympics_data, clean_data, get_sport_columns
 from analysis_countries import analyze_countries_by_medals, format_countries_report
 from analysis_sports import analyze_sports_dominance, format_dominance_report
 from analysis_gender import analyze_gender_ratio, format_gender_report
@@ -7,6 +7,7 @@ from analysis_gender_medals import analyze_gender_medals_correlation, format_gen
 from analysis_gold import analyze_gold_correlation, format_gold_report
 from analysis_sports_variety import analyze_sports_variety, format_sports_variety_report
 from analysis_sports_distribution import analyze_sports_distribution, format_sports_distribution_report
+from visualization import create_all_visualizations
 
 
 def main():
@@ -72,6 +73,11 @@ def main():
     distribution_analysis = analyze_sports_distribution(df)
     distribution_report = format_sports_distribution_report(distribution_analysis)
     print(distribution_report)
+    
+    # ===== Visualisierungen erstellen =====
+    print("Erstelle Visualisierungen mit Plotly...")
+    sport_columns = get_sport_columns(df)
+    create_all_visualizations(df, sport_columns, "../output")
     
     print("=" * 60)
     print("Analyse abgeschlossen!")
