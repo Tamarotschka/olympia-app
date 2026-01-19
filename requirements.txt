@@ -8,3 +8,6 @@ numpy==2.4.1
 # Visualisierung
 plotly==6.0.1
 kaleido==0.2.1
+
+# Web-Dashboard
+dash==2.18.2
