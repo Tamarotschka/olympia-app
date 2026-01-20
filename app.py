@@ -25,7 +25,7 @@ def load_data():
 df, sport_columns = load_data()
 
 # Dash App erstellen
-app = Dash(__name__)
+dash_app = Dash(__name__)
 
 # Farben und Styling
 colors = {
@@ -241,7 +241,7 @@ total_medals = int(df['Total Medals'].sum())
 countries_with_medals = len(df[df['Total Medals'] > 0])
 
 # App Layout
-app.layout = html.Div(style=styles['container'], children=[
+dash_app.layout = html.Div(style=styles['container'], children=[
     # Header
     html.Div(style=styles['header'], children=[
         html.H1('Olympische Winterspiele 2022', style=styles['title']),
@@ -352,8 +352,10 @@ def update_tab(tab):
         ])
 
 
-server = app.server  # Für Deployment (Gunicorn)
+# Für Deployment: 'app' muss das WSGI-callable sein
+server = dash_app.server
+app = server  # Gunicorn erwartet 'app:app'
 
 if __name__ == '__main__':
     print("Starte Dash-App auf http://127.0.0.1:8050")
-    app.run(debug=True)
+    dash_app.run(debug=True)
