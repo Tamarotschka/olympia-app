@@ -340,6 +340,8 @@ def update_tab(tab):
         ])
 
 
+server = app.server  # Für Deployment (Gunicorn)
+
 if __name__ == '__main__':
     print("Starte Dash-App auf http://127.0.0.1:8050")
     app.run(debug=True)

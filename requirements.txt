@@ -11,3 +11,4 @@ kaleido==0.2.1
 
 # Web-Dashboard
 dash==2.18.2
+gunicorn==23.0.0

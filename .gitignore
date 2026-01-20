@@ -1,5 +1,22 @@
-venv/*
-.idea
-src/__pycache__/
+# Python
+__pycache__/
 *.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
 
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Output
+output/*.png
+output/*.html
+
+# OS
+.DS_Store
+Thumbs.db
