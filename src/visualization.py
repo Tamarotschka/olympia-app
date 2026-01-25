@@ -163,7 +163,7 @@ def create_continent_pie_chart(df: pd.DataFrame, output_path: str):
 
 def create_gold_efficiency_chart(df: pd.DataFrame, output_path: str):
     """
-    Erstellt ein Diagramm zur Gold-Effizienz (Goldanteil an Gesamtmedaillen).
+    Erstellt ein Diagramm zum Gold-Anteil (Goldanteil an Gesamtmedaillen).
     """
     df_with_medals = df[df['Total Medals'] > 0].copy()
     df_with_medals['Goldanteil'] = (df_with_medals['Gold'] / df_with_medals['Total Medals'] * 100).round(1)
@@ -245,7 +245,7 @@ def create_all_visualizations(df: pd.DataFrame, sport_columns: list, output_dir:
     print("  - Erstelle Kontinent-Tortendiagramm...")
     create_continent_pie_chart(df, f"{output_dir}/kontinente_medaillen.png")
     
-    print("  - Erstelle Gold-Effizienz-Diagramm...")
+    print("  - Erstelle Gold-Anteil-Diagramm...")
     create_gold_efficiency_chart(df, f"{output_dir}/gold_effizienz.png")
     
     print("  - Erstelle Sportarten-Vielfalt-Diagramm...")

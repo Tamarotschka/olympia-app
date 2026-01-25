@@ -265,7 +265,7 @@ app.layout = html.Div(style=styles['container'], children=[
             dcc.Tab(label='Geschlechter', value='tab-gender', style={'padding': '12px'}, selected_style={'padding': '12px', 'borderTop': f'3px solid {colors["primary"]}'}),
             dcc.Tab(label='Sportarten', value='tab-sports', style={'padding': '12px'}, selected_style={'padding': '12px', 'borderTop': f'3px solid {colors["primary"]}'}),
             dcc.Tab(label='Kontinente', value='tab-continents', style={'padding': '12px'}, selected_style={'padding': '12px', 'borderTop': f'3px solid {colors["primary"]}'}),
-            dcc.Tab(label='Gold-Effizienz', value='tab-gold', style={'padding': '12px'}, selected_style={'padding': '12px', 'borderTop': f'3px solid {colors["primary"]}'}),
+            dcc.Tab(label='Gold-Anteil', value='tab-gold', style={'padding': '12px'}, selected_style={'padding': '12px', 'borderTop': f'3px solid {colors["primary"]}'}),
         ], style={'marginBottom': '1.5rem'}),
         
         # Tab Content
@@ -333,7 +333,7 @@ def update_tab(tab):
     
     elif tab == 'tab-gold':
         return html.Div([
-            html.H3('Gold-Effizienz der Länder', style={'color': colors['text'], 'marginBottom': '1rem'}),
+            html.H3('Gold-Anteil der Länder', style={'color': colors['text'], 'marginBottom': '1rem'}),
             html.P('Anteil der Goldmedaillen an den Gesamtmedaillen pro Land.', 
                    style={'color': colors['text_light'], 'marginBottom': '1rem'}),
             dcc.Graph(figure=create_gold_chart())

@@ -15,8 +15,6 @@ ENV/
 
 # Output
 output/*.png
-output/*.html
-
-# OS
+output/*.html# OS
 .DS_Store
 Thumbs.db
